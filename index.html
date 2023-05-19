@@ -6,25 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/ress@4.0.0/dist/ress.min.css"
+      href="./css/recet.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+    <title>日誌</title>
   </head>
   <body>
     <header>
-      <h1>count up</h1>
-      <p id="record">Best Record: <span>0</span></p>
-      <p id="timer">Time: <span>0</span></p>
+      <input type="date">
     </header>
-    <div id="game">
-      <div id="numbers"></div>
-      <div id="startScene">
-        <p></p>
-        <button>START</button>
+    <section>
+      <div class="head_wrapper">
+        <div>
+            <h1>アファメーション</h1>
+              <textarea name="afamation" rows="4" cols="50">私は、偉大な実業家としてビジネスを成功させる。</textarea>
+        </div>
+        <div>
+            <div class="meigen_wrapper">
+              <h1>本日の名言</h1>
+              <button id="seisei">新しい名言を生成</button>
+            </div>
+              <textarea name="afamation" rows="4" cols="50" id="meigen"></textarea>
+            </div>
       </div>
-    </div>
+    </section>  
+    <section>
+      <div class="todo_wrapper">
+        <div>
+          <h1>カレンダー</h1>
+          <!-- srcにGoogleカレンダーのURLをセットする -->
+          <iframe src="" style="border:solid 1px #777" width="500" height="700" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div>
+          <h1>TODO-List</h1>
+          <form class="todo_wrapper">
+            <div>
+              <p>タスク</p>
+              <input id="task_value" type="text" />
+            </div>
+            <div class="todo_space">
+              <p>時間(分)</p>
+              <input id="time_value" type="text" style="width:50px;"/>
+              <span id="time_display"></span>
+              <button id="task_submit" type="button">Add Task</button>
+            </div>
+          </form>
+          <div id="table">
+            <h2>Current Tasks</h2>
+            <ul id="task_list"></ul>
 
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="head_wrapper">
+        <div>
+            <h1>今日感謝したことは何か？</h1>
+              <textarea name="afamation" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+            <h1>今日をもう一度やり直すならどうする？</h1>
+              <textarea name="afamation" rows="4" cols="50"></textarea>
+        </div>
+        <div>
+          <h1>振り返りと明日のチャレンジは？</h1>
+            <textarea name="afamation" rows="4" cols="50"></textarea>
+      </div>
+      </div>
+    </section> 
+    <a href="https://twitter.com/intent/tweet?text=ここにツイートの内容" target="_blank">
+      <i class="fab fa-twitter fa-3x" style="color: #1971f5;"></i>
+  </a>
+  
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="./js/test.js"></script>
   </body>
